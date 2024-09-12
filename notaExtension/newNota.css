@@ -43,6 +43,7 @@ font-family: Arial, sans-serif;
 .popup-content {
 
     text-align: center;
+   
 
 }
 
@@ -80,7 +81,22 @@ font-family: Arial, sans-serif;
 
     width: 200px;
     height: 200px;
-    border: 0
-
+    inline-size: 150px;
+    overflow-wrap: break-all;
 }
 
+textarea.text{
+    width: 100%;
+    height: 100%;
+    border-color: Transparent;
+    resize:none;
+    outline-color: transparent;
+    border:none;
+    outline:none;
+}
+
+form.formtextarea{
+    outline-color: transparent;
+    border:none;
+    outline:none;
+}
