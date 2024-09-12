@@ -1,4 +1,7 @@
-document.getElementById("criar").onclick = function() {
-    let d = new Date();
-    alert("Hoje é "+ d);  
-};
+document.addEventListener("DOMContentLoaded", function () {
+
+    document.getElementById("criar").onclick = function() {
+        window.open ("newNota.html", "New Window", "height=600,width=550");
+    };
+    
+});
