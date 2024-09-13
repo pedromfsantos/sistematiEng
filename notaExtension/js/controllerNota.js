@@ -4,17 +4,20 @@ import {Manager} from './managerLogic.js'
 
 // ###################### NOTAS #####################
 
+
+
 //let manager = getManager();
+
 
 //FECHAR NOTA
 document.getElementById("closePopup").onclick = function() {
-        console.log("firsttest")
+        window.close();
 }
 
 //  SALVA NOTA
  
 document.getElementById("save").onclick = function() {
-    
+        //save with storage
 }
 
 // DELETAR NOTA
