@@ -51,6 +51,17 @@ font-family: Arial, sans-serif;
 
 }
 
+.popup .dropdownNew .menuSave {
+
+    /* position: absolute; */
+    top: 1px;
+    right: 300px;
+    font-size: 20px;
+    cursor: pointer;
+    color: #000000;
+
+}
+
 .popup #emailInput {
 
     width: 200px;
@@ -78,3 +89,42 @@ form.formtextarea{
 button.close{
     display:"none";
 }
+
+
+
+/* MENU DE SALVAR OU EXCLUIR */
+
+
+  .dropdownNew {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown-contentNew {
+    display: none;
+    position: absolute;
+    background-color: #ffffff;
+    min-width: 90px;
+    z-index: 1;
+  }
+  
+  .dropdown-contentNew button {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-size: 12px;
+    overflow: hidden; 
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    margin: 0.1em;
+    width: 100%;
+    border: none;
+    background-color: #e7e7e7;
+  }
+  
+  .dropdown-contentNew button:hover {background-color: #ddd;}
+  
+  .dropdownNew:hover .dropdown-contentNew {display: block;}
+  
+  .dropdownNew:hover .dropbtnNew {background-color: #3e8e41;}

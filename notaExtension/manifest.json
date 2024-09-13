@@ -1,7 +1,10 @@
 {
     "manifest_version": 3,
-    "name": "Hello Extensions",
+    "name": "Smart Note",
     "description": "Base Level Extension",
+    "permissions":[
+      "storage"
+    ],
     "version": "1.0",
     "action": {
       "default_popup": "notasMenu.html",

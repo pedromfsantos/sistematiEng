@@ -9,14 +9,24 @@
         <div class="popup" id="popup">
             <span class="minimize" id="minPopup">&minus;</span>
             <span class="closeNote" id="closePopup">&times;</span>
-    
+            
+            <div class="dropdownNew">
+                <span class="menuSave" id="menuNota">...</span>
+                <div class="dropdown-contentNew">
+                  <table class = buttonsNew>
+                    <tr><td><button id="save">Salvar</button></tr>
+                    <tr><td><button id="exclude">Excluir</button></tr>
+                  </table>
+                </div>
+              </div>
+
             <div class="popup-content">
     
                 <form class="formtextarea">
                     <br>
                     <textarea class = "text"
                     placeholder="Add note"
-                              rows="19" 
+                              rows="18" 
                               cols="38"
                               name="txt"
                               id="inputText"></textarea>
@@ -27,5 +37,5 @@
         </div>
     
     </div>
-    <script src="js/notaLogic.js"></script>
+    <script type="module" src="js/controllerNota.js"></script>
 </body>
