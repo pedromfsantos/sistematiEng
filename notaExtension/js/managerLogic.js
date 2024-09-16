@@ -10,13 +10,23 @@ export class Manager{
     }
 
     createNewNote(){
-        this.#nameVector.push("NewWindow"+this.#nameVector.length)
-        //console.log(this.#nameVector)
+        chrome.storage.local.get(null).then((result) => {
+        let testString = "NewWindow"+this.#nameVector.length
+        var allKeys = Object.keys(result)
+        if (!( testString in result)){
+            this.#nameVector.push("NewWindow"+this.#nameVector.length)
+            //console.log(this.#nameVector)
+        }
+        else {
+            var index = allKeys.length
+            this.#nameVector.push("NewWindow"+index)
+        }
         let notaObj = new Nota(this.vectorOfNames[this.#nameVector.length-1],"newNota.html", this);
         this.#notaArray.push(notaObj)
         //console.log(this.#notaArray)
         notaObj.openNote();
         ///window.open ("newNota.html", nameVector[nameVector.lenght-1], "height=400,width=400,menubar=0,titlebar=0,");
+        });
     }
     
     deleteAllNotes(){
@@ -37,17 +47,24 @@ export class Manager{
         var allText= Object.values(result)
         console.log("todas as chaves " + allKeys)
         console.log("todos os texto " + allText)
-
-        this.#notaArray.forEach(nota => {
-            console.log("nome nota " + nota.nameNota)
-            console.log("todas as chaves " + allKeys)
-            console.log("tem nota nas chaves? " + result.hasOwnProperty(nota.nameNota) +" "+  nota.nameNota + " " + allKeys[0])
-            if(nota.nameNota in result){  //precisei atualizar oos objetos aqui ja que nao seria exatamente possível no outro arquivo
-                console.log("nota para abrir " + this.#notaArray.indexOf(nota))
-                //nota.closeNote();
-                nota.openNote();
-            }
-        });
+        if(!(this.#notaArray.length === 0)){
+            this.#notaArray.forEach(nota => {
+                console.log("nome nota " + nota.nameNota)
+                console.log("todas as chaves " + allKeys)
+                console.log("tem nota nas chaves? " + result.hasOwnProperty(nota.nameNota) +" "+  nota.nameNota + " " + allKeys[0])
+                if(nota.nameNota in result){  //precisei atualizar oos objetos aqui ja que nao seria exatamente possível no outro arquivo
+                    console.log("nota para abrir " + this.#notaArray.indexOf(nota))
+                 //nota.closeNote();
+                    nota.openNote();
+                }
+            });
+        } else{
+            allKeys.forEach(nomeNota => {
+                let newObj = new Nota(nomeNota,"newNota.html", this);
+                newObj.openNote();
+            })
+            
+        }
        });
     }
 
