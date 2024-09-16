@@ -24,7 +24,7 @@ export class Manager{
             nota.closeNote();
             //console.log(nota);
         });
-        chrome.storage.session.clear(); //clear all notes
+        chrome.storage.local.clear(); //clear all notes
         this.arrayOfNotes = [];
         this.#nameVector = [];
         // delete also from storage
@@ -32,8 +32,22 @@ export class Manager{
     }
 
     openAllNotes(){
-       chrome.storage.sync.get(["NewWindow0"]).then((result) => { // AGORA MEXER NA LOGICA DA WINDOW0 WINDOW 01 ETC
-        console.log ("text is "+ result.NewWindow0);
+       chrome.storage.local.get(null).then((result) => { 
+        var allKeys = Object.keys(result)
+        var allText= Object.values(result)
+        console.log("todas as chaves " + allKeys)
+        console.log("todos os texto " + allText)
+
+        this.#notaArray.forEach(nota => {
+            console.log("nome nota " + nota.nameNota)
+            console.log("todas as chaves " + allKeys)
+            console.log("tem nota nas chaves? " + result.hasOwnProperty(nota.nameNota) +" "+  nota.nameNota + " " + allKeys[0])
+            if(nota.nameNota in result){  //precisei atualizar oos objetos aqui ja que nao seria exatamente possível no outro arquivo
+                console.log("nota para abrir " + this.#notaArray.indexOf(nota))
+                //nota.closeNote();
+                nota.openNote();
+            }
+        });
        });
     }
 

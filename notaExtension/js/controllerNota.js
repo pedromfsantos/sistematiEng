@@ -6,9 +6,6 @@ import {Manager} from './managerLogic.js'
 
 
 
-//let manager = getManager();
-
-
 //FECHAR NOTA
 document.getElementById("closePopup").onclick = function() {
         window.close();
@@ -21,7 +18,7 @@ document.getElementById("save").onclick = function() {
         var v1 = window.name;
         var obj= {};
         obj[v1] = text;
-        chrome.storage.sync.set(obj).then(() => {
+        chrome.storage.local.set(obj).then(() => {
                 console.log(text + " Was saved in "+ window.name);
         });
 
@@ -31,10 +28,26 @@ document.getElementById("save").onclick = function() {
 
  document.getElementById("exclude").onclick = function(){
         const name = window.name
-        chrome.storage.sync.remove([name], function(){
+        chrome.storage.local.remove([name], function(){
                 console.log("Note Deleted");
         });
         window.close();
  }
+
+window.addEventListener("beforeunload", checkText())
+
+function checkText(){
+
+        chrome.storage.local.get(null).then((result) => { 
+                var allKeys = Object.keys(result)
+                var allText= Object.values(result)
+                console.log("todas as chaves " + allKeys)
+                console.log("todos os texto " + allText)
+                if (window.name in result) {
+                        document.getElementById("inputText").value = result[window.name]
+                }
+        })
+       
+}
 
  // MUDAR COR
