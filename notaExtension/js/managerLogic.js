@@ -45,22 +45,25 @@ export class Manager{
        chrome.storage.local.get(null).then((result) => { 
         var allKeys = Object.keys(result)
         var allText= Object.values(result)
-        console.log("todas as chaves " + allKeys)
-        console.log("todos os texto " + allText)
         if(!(this.#notaArray.length === 0)){
             this.#notaArray.forEach(nota => {
-                console.log("nome nota " + nota.nameNota)
-                console.log("todas as chaves " + allKeys)
-                console.log("tem nota nas chaves? " + result.hasOwnProperty(nota.nameNota) +" "+  nota.nameNota + " " + allKeys[0])
                 if(nota.nameNota in result){  //precisei atualizar oos objetos aqui ja que nao seria exatamente possível no outro arquivo
                     console.log("nota para abrir " + this.#notaArray.indexOf(nota))
                  //nota.closeNote();
                     nota.openNote();
                 }
             });
+            allKeys.forEach(nomeNota => {
+                if (!(nomeNota in this.#nameVector )){
+                    let newObj = new Nota(nomeNota,"newNota.html", this);
+                    this.#notaArray.push(newObj)
+                    newObj.openNote();
+                }
+            })
         } else{
             allKeys.forEach(nomeNota => {
                 let newObj = new Nota(nomeNota,"newNota.html", this);
+                this.#notaArray.push(newObj)
                 newObj.openNote();
             })
             
