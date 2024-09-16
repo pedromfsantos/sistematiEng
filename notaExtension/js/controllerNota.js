@@ -17,13 +17,24 @@ document.getElementById("closePopup").onclick = function() {
 //  SALVA NOTA
  
 document.getElementById("save").onclick = function() {
-        //save with storage
+        let text = document.getElementById("inputText").value
+        var v1 = window.name;
+        var obj= {};
+        obj[v1] = text;
+        chrome.storage.sync.set(obj).then(() => {
+                console.log(text + " Was saved in "+ window.name);
+        });
+
 }
 
 // DELETAR NOTA
 
  document.getElementById("exclude").onclick = function(){
-
+        const name = window.name
+        chrome.storage.sync.remove([name], function(){
+                console.log("Note Deleted");
+        });
+        window.close();
  }
 
  // MUDAR COR

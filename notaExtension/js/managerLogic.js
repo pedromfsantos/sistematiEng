@@ -24,10 +24,17 @@ export class Manager{
             nota.closeNote();
             //console.log(nota);
         });
+        chrome.storage.session.clear(); //clear all notes
         this.arrayOfNotes = [];
         this.#nameVector = [];
         // delete also from storage
 
+    }
+
+    openAllNotes(){
+       chrome.storage.sync.get(["NewWindow0"]).then((result) => { // AGORA MEXER NA LOGICA DA WINDOW0 WINDOW 01 ETC
+        console.log ("text is "+ result.NewWindow0);
+       });
     }
 
     get arrayOfNotes(){

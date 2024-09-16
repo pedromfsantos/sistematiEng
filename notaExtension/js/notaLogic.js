@@ -19,7 +19,6 @@ export class Nota {
     }
 
     closeNote(){
-        console.log("Hello?")
         this.#noteWindow.close();
     }
 

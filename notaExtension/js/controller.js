@@ -18,6 +18,11 @@ document.getElementById("deleteall").onclick = function() {
     manager.deleteAllNotes();
 };
 
+document.getElementById("open").onclick = function(){
+    console.log("cliquei")
+    manager.openAllNotes();
+}
+
 export function getManager(){
     return manager;
 }
