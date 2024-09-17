@@ -14,16 +14,12 @@ export class Nota {
     }
 
     openNote(){
-        this.#noteWindow = window.open (this.#url, this.#name, "height=400,width=400,menubar=0,titlebar=0");
+        this.windowNote = window.open (this.#url, this.#name, "height=400,width=400,menubar=0,titlebar=0");
         
     }
 
     closeNote(){
-        this.#noteWindow.close();
-    }
-
-    deleteNote(){
-
+        this.windowNote.close();
     }
 
     get nameNota(){

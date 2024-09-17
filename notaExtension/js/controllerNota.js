@@ -6,6 +6,8 @@ import {Manager} from './managerLogic.js'
 
 
 
+
+
 //FECHAR NOTA
 document.getElementById("closePopup").onclick = function() {
         window.close();

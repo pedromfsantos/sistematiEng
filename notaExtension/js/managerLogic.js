@@ -15,15 +15,16 @@ export class Manager{
         var allKeys = Object.keys(result)
         if (!( testString in result)){
             this.#nameVector.push("NewWindow"+this.#nameVector.length)
-            //console.log(this.#nameVector)
+            //console.log(this.#nameVector.length)
         }
         else {
             var index = allKeys.length
             this.#nameVector.push("NewWindow"+index)
+            //console.log(this.#nameVector.length)
         }
         let notaObj = new Nota(this.vectorOfNames[this.#nameVector.length-1],"newNota.html", this);
         this.#notaArray.push(notaObj)
-        //console.log(this.#notaArray)
+        console.log(this.arrayOfNotes.length)
         notaObj.openNote();
         ///window.open ("newNota.html", nameVector[nameVector.lenght-1], "height=400,width=400,menubar=0,titlebar=0,");
         });
@@ -45,6 +46,8 @@ export class Manager{
        chrome.storage.local.get(null).then((result) => { 
         var allKeys = Object.keys(result)
         var allText= Object.values(result)
+        console.log("chaves " + allKeys)
+        console.log("allText " + allText)
         if(!(this.#notaArray.length === 0)){
             this.#notaArray.forEach(nota => {
                 if(nota.nameNota in result){  //precisei atualizar oos objetos aqui ja que nao seria exatamente possível no outro arquivo
@@ -55,11 +58,14 @@ export class Manager{
             });
             allKeys.forEach(nomeNota => {
                 if (!(nomeNota in this.#nameVector )){
+                    console.log("ENTREI AQUI")
                     let newObj = new Nota(nomeNota,"newNota.html", this);
                     this.#notaArray.push(newObj)
                     newObj.openNote();
                 }
             })
+            console.log("TAMANHO VETOR notas NO FINALL" + this.arrayOfNotes.length)
+            console.log("TAMANHO VETOR NOME NO FINALL" + this.vectorOfNames.length)
         } else{
             allKeys.forEach(nomeNota => {
                 let newObj = new Nota(nomeNota,"newNota.html", this);
