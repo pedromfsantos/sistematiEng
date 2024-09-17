@@ -58,14 +58,11 @@ export class Manager{
             });
             allKeys.forEach(nomeNota => {
                 if (!(nomeNota in this.#nameVector )){
-                    console.log("ENTREI AQUI")
                     let newObj = new Nota(nomeNota,"newNota.html", this);
                     this.#notaArray.push(newObj)
                     newObj.openNote();
                 }
             })
-            console.log("TAMANHO VETOR notas NO FINALL" + this.arrayOfNotes.length)
-            console.log("TAMANHO VETOR NOME NO FINALL" + this.vectorOfNames.length)
         } else{
             allKeys.forEach(nomeNota => {
                 let newObj = new Nota(nomeNota,"newNota.html", this);

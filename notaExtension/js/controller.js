@@ -19,7 +19,6 @@ document.getElementById("deleteall").onclick = function() {
 };
 
 document.getElementById("open").onclick = function(){
-    console.log("cliquei")
     manager.openAllNotes();
 }
 
