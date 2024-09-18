@@ -54,11 +54,12 @@ chrome.storage.local.set(obj).then(() => {
 });
 ```
 
-     em que obj é um dado no formato JSON, por exemplo:
-
+em que obj é um dado no formato JSON, por exemplo:
+     
 ```
 {"NewWindow0":"Anotacao"}
 ```
+
 - Os dados são recuperados utilizando
 
 ```
@@ -66,7 +67,9 @@ chrome.storage.local.get(null).then((result) => {
   //callback function   
 });
 ```
-    Sendo que, ao passar null como parâmetro para o método get , é retornado todos os pares chaves valor em  result.
+
+
+Sendo que, ao passar null como parâmetro para o método get , é retornado todos os pares chaves valor em  result.
     O método também aceita a passagem de um valor de chave, e assim retornará em  result o par chave-valor associado.
 
 - Cada nota é individualmente removida utilizando o método
@@ -83,6 +86,20 @@ chrome.storage.local.remove([name], function(){
 ```
 chrome.storage.local.clear();
 ```
+
+## Como Usar:
+
+### Instalação
+
+Para instalar a extensão, no momento, é recomendado que, ao clonar o repositório, se carregue sem compactação, a extensão no google chrome. Para fazê-lo basta:
+- Clicar no ícone **Extensões**, localizado no canto superior direito do navegador.
+- Clicar em **Gerenciar Extensões**
+- Clicar em **Carregar sem compactação**, conforme a imagem abaixo, e selecionar a pasta ***notaExtension***:
+
+![comousar1](https://github.com/user-attachments/assets/56baa799-5fb4-41cc-86b7-f0fad3177ad0)
+
+
+
 
 ## 📝 Licença
 
