@@ -87,7 +87,7 @@ chrome.storage.local.remove([name], function(){
 chrome.storage.local.clear();
 ```
 
-## Como Usar:
+## Manual do usuário:
 
 ### Instalação
 
@@ -100,7 +100,7 @@ Para instalar a extensão, no momento, é recomendado que, ao clonar o repositó
 
 Ao fazer isso, você deve ser capaz de observar a presença do Smart Note entre suas extensões. Se desejar, fixe a extensão para facilitar o uso. 
 
-### Uso da Ferramenta
+### Como usar
 
 #### Criar uma nova nota:
 
