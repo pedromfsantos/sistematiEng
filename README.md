@@ -138,7 +138,7 @@ de ser aberta, posteriormente, pelo botão *Open Notes*. Ou, caso o usuário ape
 ![comousar7](https://github.com/user-attachments/assets/b954798a-1195-4f85-96ec-afae2e605b9f)
 
 > [!WARNING]
-> Ao simplesemte fechar uma nota, que não tenha sido salva, pelo método demonstrado neste item, o conteúdo escrito será perdido, uma vez que ele sequer nunca foi armazenado.
+> Ao simplesemte fechar uma nota, que não tenha sido salva, pelo método demonstrado neste item, o conteúdo escrito será perdido, uma vez que ele sequer foi armazenado.
 
 #### 
 ## 📝 Licença
