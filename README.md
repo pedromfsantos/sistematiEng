@@ -98,9 +98,49 @@ Para instalar a extensão, no momento, é recomendado que, ao clonar o repositó
 
 ![comousar1](https://github.com/user-attachments/assets/56baa799-5fb4-41cc-86b7-f0fad3177ad0)
 
+Ao fazer isso, você deve ser capaz de observar a presença do Smart Note entre suas extensões. Se desejar, fixe a extensão para facilitar o uso. 
 
+### Uso da Ferramenta
 
+#### Criar uma nova nota:
 
+Para criar uma nova nota, basta clicar no ícone do Smart Note, disponibilizando o menu. Assim, basta clicar em *New Note* 
+
+![comousar2](https://github.com/user-attachments/assets/d1344ac9-395e-4c75-bd04-3e1d20ab8bfc)
+
+Assim, uma nova nota deve aparecer em sua tela, e anotações podem ser feitas no campo destinado.
+
+![comousar3](https://github.com/user-attachments/assets/636bbe69-401e-49f7-9295-5a238bdb7516)
+
+#### Salvar e excluir uma nota
+
+Para salvar ou excluir uma nota, basta passar o cursor do mouse sobre o ícone "..." que as opções irão aparecer. Basta clicar em alguma delas para executar a ação:
+
+![comousar4](https://github.com/user-attachments/assets/f331443c-5795-4b03-a437-30b40909a4a7)
+
+#### Abrir todas as notas salvas
+
+O menu conta com a opção de abrir todas as notas salvas, portanto basta clicar na opção *Open Notes* que todas as notas salvas até então serão restauradas e aparecerão na tela.
+
+![comousar5](https://github.com/user-attachments/assets/42f36544-2378-4a43-95c7-33629be2e291)
+
+#### Deletar todas as notas
+
+Além disso, é possível deletar todas as notas, as salvas e as não salvas que ainda estão na tela. Para tal, basta clicar, no menu, na opção *Delete Notes*
+
+![comousar6](https://github.com/user-attachments/assets/1531f875-2f91-4f47-a941-ad58ea89be2d)
+
+#### Fechar uma nota
+
+Se o usuário quiser fechar uma nota sem necessariamente lidar com armazenamento, ele também pode. Isso quer dizer que pode-se fechar uma que foi nota salva, sem necessariamente deletá-la, o que a possibilita
+de ser aberta, posteriormente, pelo botão *Open Notes*. Ou, caso o usuário apenas deseje fechar uma nota não salva. Para tanto basta clicar no ícone "x", presente no canto superior direito da nota
+
+![comousar7](https://github.com/user-attachments/assets/b954798a-1195-4f85-96ec-afae2e605b9f)
+
+> [!WARNING]
+> Ao simplesemte fechar uma nota, que não tenha sido salva, pelo método demonstrado neste item, o conteúdo escrito será perdido, uma vez que ele sequer nunca foi armazenado.
+
+#### 
 ## 📝 Licença
 
 Esse projeto está sob licença. Veja o arquivo [LICENÇA](LICENSE.md) para mais detalhes.
