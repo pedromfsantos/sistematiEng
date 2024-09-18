@@ -42,6 +42,47 @@ Sendo que na nota, no ícone dos três pontinhos, ao passar o mouse por cima, ve
 
 ![tela_nota2](https://github.com/user-attachments/assets/b266b2e8-20cf-491c-84e0-9e2242c60d81)
 
+#### Armazenamento
+
+Como dito anteriormente, os dados são salvos utilizando a API do google [chrome.storage](https://developer.chrome.com/docs/extensions/reference/api/storage?hl=pt-br)
+
+- Os dados são armazenados ao chamar o método 
+
+```
+chrome.storage.local.set(obj).then(() => {
+  //callback function
+});
+```
+
+     em que obj é um dado no formato JSON, por exemplo:
+
+```
+{"NewWindow0":"Anotacao"}
+```
+- Os dados são recuperados utilizando
+
+```
+chrome.storage.local.get(null).then((result) => {
+  //callback function   
+});
+```
+    Sendo que, ao passar null como parâmetro para o método get , é retornado todos os pares chaves valor em  result.
+    O método também aceita a passagem de um valor de chave, e assim retornará em  result o par chave-valor associado.
+
+- Cada nota é individualmente removida utilizando o método
+
+```
+chrome.storage.local.remove([name], function(){
+  //callback function
+});
+```
+     Em que [name] é o valor da chave que se quer remover.
+
+- Por fim, o método que deleta todos os valores armazenados é o
+
+```
+chrome.storage.local.clear();
+```
 
 ## 📝 Licença
 
