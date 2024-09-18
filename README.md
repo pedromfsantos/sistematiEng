@@ -1,6 +1,6 @@
 # Smart Note
 
-> Sistematização da matéria de Programação Orientada a Objetos, do curso de ADS do CEUB.
+> Sistematização da matéria de Engenharia e Projeto de Software, do curso de ADS do CEUB.
 > Para o trabalho, foi escolhido realizar o desenvolvido de uma extensão do google chrome qque leva o nome de Smart Note.
 > Seu intuito é servir um aplicativo prático e fácil de se utilizar caso se deseje realizar pequenas anotações e salvá-las, durante o uso do google chrome.
 
